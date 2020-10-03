@@ -1,0 +1,25 @@
+<header>
+    <div id="flex-content">
+   <h1 id="heading-section">Connectface</h1>
+    <div class="auth-links">
+        <ul>
+            <% if (locals.user){ %>
+            <li>
+                <a href="/profile"><%= user.name %></a>
+            </li>
+            <li>
+                <a href="/Signout">Sign Out</a>
+            </li>
+            <% }else{ %>
+            <li>
+                <a href="/Signin">Sign In</a>
+            </li>
+            <li>
+                <a href="/Signup">Sign Up</a>
+            </li>
+    
+            <% } %>
+        </ul>
+    </div>
+    </div>
+</header>

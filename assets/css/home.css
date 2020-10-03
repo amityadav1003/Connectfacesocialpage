@@ -1,0 +1,39 @@
+
+#flex-content{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    background-color: lightblue;
+    height: 10%;
+}
+#heading-section{
+    color: white;
+    padding-bottom: 5px;
+    font-weight: 200;
+}
+
+.auth-links ul {
+    margin-right: 40%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.auth-links ul a{
+    margin: 2px;
+    font-size: 20px;
+    color: black;
+}
+#details{
+    margin-top: 20px;
+    padding: 2px;
+    height: auto;
+    width: 50%;
+    font-size: 20px; 
+    color: black;
+}
+#image-section{
+    background-image: linear-gradient(blue,lightblue);
+    height: 100%;
+    width: 100%;
+}

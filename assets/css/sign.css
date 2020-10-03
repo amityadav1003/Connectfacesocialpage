@@ -1,0 +1,23 @@
+.main-head{
+    color: white;
+    padding-bottom: 5px;
+    font-weight: 200;
+    padding-left: 8px;
+    background-color: lightblue;
+}
+body{
+    background-image: linear-gradient(blue,lightblue);
+}
+.head-sect{
+    text-align: center;
+    margin-top: 150px;
+    color:black;
+    font-weight: 150;
+}
+.form-section{
+   margin-left: 45%;
+}
+.form-section input{
+    display: block;
+    margin: 5px;
+}

@@ -1,0 +1,10 @@
+#contact-container{
+    margin:auto;
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+}
+#friend-container{
+    display:inline-block;
+}
