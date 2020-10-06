@@ -1,6 +1,7 @@
 
 <head>
     <link rel="stylesheet" href="/scss/layout.scss">
+    <link rel="stylesheet" href="/css/chat_box.css">
 </head>
 <body>
 <%- include('_header') -%>
@@ -87,6 +88,28 @@
    <%for(let i of users){%>
        <p><%= i.name %></p>
    <%}%>
+   <% if(locals.user){%>
+    <div id="user-chat-box">
+		<ul id="chat-messages-list">
+			<li class="other-message">
+				<span>Other Message</span>
+			</li>
+			<li class="self-message">
+				<span>
+					Self Message
+				</span>
+				
+			</li>
+
+		</ul>
+		<div id="chat-message-input-container">
+			<input id="chat-message-input" placeholder="Type message here">
+			<button id="send-message">Send</button>
+		</div>
+
+	</div>
+
+<%}%>
    <script src='/js/jquery-3.5.1.js'></script>
    <script src = '/js/comments.js'></script>
    <script src='/js/post.js'></script>
@@ -97,7 +120,13 @@
         let toggleLike = new ToggleLike(self);
     });
     </script>
-   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
+   <script src="/js/chat_engine.js"></script>
+<% if (locals.user){ %>
+<script>
+    new ChatEngine('user-chat-box', '<%= locals.user.email %>')
+</script>
+<% } %>
     
    
   

@@ -12,6 +12,11 @@ const flash = require('connect-flash');
 const passportGoogle = require('./config/passport-google-oauth');
 const customMware = require('./config/middleware');
 const passportJWT = require('./config/passport-jwt-strategy');
+const chatServer = require('http').Server(app);
+const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
+chatServer.listen(5000);
+console.log('chat server is listening on port 5000');
+
 
 app.use(cookieParser());
 app.use(express.urlencoded());
